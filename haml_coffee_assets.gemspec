@@ -19,7 +19,7 @@ Gem::Specification.new do |s|
   s.files = Dir.glob('{app,lib,vendor}/**/*') + %w[LICENSE README.md]
 
   s.add_runtime_dependency 'coffee-script', '~> 2.0'
-  s.add_runtime_dependency 'tilt', '~> 1.1'
+  s.add_runtime_dependency 'tilt', '>= 1.3.3'
   s.add_runtime_dependency 'sprockets', '~> 2.0'
 
   s.add_development_dependency 'bundler'

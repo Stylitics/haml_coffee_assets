@@ -7,7 +7,7 @@ module HamlCoffeeAssets
     # Rails for non-HTML formats, since a template name without a MIME type
     # in it would normally be a fallback for all formats.
     #
-    class Resolver < ::ActionView::FileSystemResolver
+    class Resolver < ::ActionView::OptimizedFileSystemResolver
       def find_templates(name, prefix, partial, details)
         if details[:formats].include?(:html)
           clear_cache if ::Rails.env == "development"
